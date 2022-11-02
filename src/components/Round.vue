@@ -25,19 +25,19 @@
           <img src="../assets/images/icon-scissors.svg" />
         </div>
 
-        <!-- <div
+        <div
           class="btn lizard-btn-extended your-btn-picked"
           v-if="yourSelection == 'lizard'"
         >
           <img src="../assets/images/icon-lizard.svg" />
-        </div> -->
+        </div>
 
-        <!-- <div
+        <div
           class="btn spock-btn-extended your-btn-picked"
           v-if="yourSelection == 'spock'"
         >
           <img src="../assets/images/icon-spock.svg" />
-        </div> -->
+        </div>
 
         <div class="win-shadow" v-if="youWin">
           <div class="circle-1">
@@ -53,9 +53,9 @@
         <router-link to="/classic" v-if="!this.$store.state.extendedMode">
           <button class="again-btn">Play Again</button>
         </router-link>
-        <!-- <router-link to="/extended" v-if="this.$store.state.extendedMode">
+        <router-link to="/extended" v-if="this.$store.state.extendedMode">
           <button class="again-btn">Play Again</button>
-        </router-link> -->
+        </router-link>
       </span>
     </div>
 
@@ -84,7 +84,7 @@
           <img src="../assets/images/icon-scissors.svg" />
         </div>
 
-        <!-- <div
+        <div
           class="btn lizard-btn-extended house-btn-picked"
           v-if="houseSelection == 'lizard'"
         >
@@ -96,7 +96,7 @@
           v-if="houseSelection == 'spock'"
         >
           <img src="../assets/images/icon-spock.svg" />
-        </div> -->
+        </div>
 
         <div class="lose-shadow" v-if="youLose">
           <div class="circle-1">
