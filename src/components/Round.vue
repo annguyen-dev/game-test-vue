@@ -136,10 +136,10 @@ export default {
         housePick = "rock";
       } else if (housePick == 3) {
         housePick = "scissors";
-        // } else if (housePick == 4) {
-        //   housePick = "lizard";
-        // } else if (housePick == 5) {
-        //   housePick = "spock";
+      } else if (housePick == 4) {
+        housePick = "lizard";
+      } else if (housePick == 5) {
+        housePick = "spock";
       }
       this.houseSelection = housePick;
     },
@@ -170,38 +170,38 @@ export default {
       }
     },
 
-    // whoWinExtended(you, house) {
-    //   if (you == house) {
-    //     this.result = "Draw";
-    //     this.youWin = false;
-    //     this.youLose = false;
-    //   } else if (you == null) {
-    //     this.result = "Error";
-    //     this.youWin = false;
-    //     this.youLose = false;
-    //   } else if (
-    //     (you == "scissors" && house == "paper") ||
-    //     (you == "scissors" && house == "lizard") ||
-    //     (you == "paper" && house == "rock") ||
-    //     (you == "paper" && house == "spock") ||
-    //     (you == "rock" && house == "lizard") ||
-    //     (you == "rock" && house == "scissors") ||
-    //     (you == "lizard" && house == "spock") ||
-    //     (you == "lizard" && house == "paper") ||
-    //     (you == "spock" && house == "scissors") ||
-    //     (you == "spock" && house == "rock")
-    //   ) {
-    //     this.result = "You Win";
-    //     this.$store.commit("INCREASE");
-    //     this.youLose = false;
-    //     this.youWin = true;
-    //   } else {
-    //     this.result = "You Lose";
-    //     this.$store.commit("DECREASE");
-    //     this.youWin = false;
-    //     this.youLose = true;
-    //   }
-    // },
+    whoWinExtended(you, house) {
+      if (you == house) {
+        this.result = "Draw";
+        this.youWin = false;
+        this.youLose = false;
+      } else if (you == null) {
+        this.result = "Error";
+        this.youWin = false;
+        this.youLose = false;
+      } else if (
+        (you == "scissors" && house == "paper") ||
+        (you == "scissors" && house == "lizard") ||
+        (you == "paper" && house == "rock") ||
+        (you == "paper" && house == "spock") ||
+        (you == "rock" && house == "lizard") ||
+        (you == "rock" && house == "scissors") ||
+        (you == "lizard" && house == "spock") ||
+        (you == "lizard" && house == "paper") ||
+        (you == "spock" && house == "scissors") ||
+        (you == "spock" && house == "rock")
+      ) {
+        this.result = "You Win";
+        this.$store.commit("INCREASE");
+        this.youLose = false;
+        this.youWin = true;
+      } else {
+        this.result = "You Lose";
+        this.$store.commit("DECREASE");
+        this.youWin = false;
+        this.youLose = true;
+      }
+    },
 
     roundAnimations() {
       const roundTimeline = gsap.timeline({ defaults: { duration: 1 } });
@@ -238,9 +238,9 @@ export default {
       setTimeout(() => {
         this.houseSelector(1, 5);
       }, 1400);
-      // setTimeout(() => {
-      //   this.whoWinExtended(this.yourSelection, this.houseSelection);
-      // }, 1600);
+      setTimeout(() => {
+        this.whoWinExtended(this.yourSelection, this.houseSelection);
+      }, 1600);
     }
     this.roundAnimations();
   },
