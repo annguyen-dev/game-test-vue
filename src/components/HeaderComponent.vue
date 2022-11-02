@@ -6,10 +6,10 @@
         src="../assets/images/logo.svg"
         alt="Rock, Paper, Scissors"
       />
-      <!-- <img
+      <img
         id="extended-logo"
         src="../assets/images/logo-bonus.svg"
-        alt="Rock, Paper, Scissors, Lizard, Spock3" -->
+        alt="Rock, Paper, Scissors, Lizard, Spock"
       />
     </div>
 
